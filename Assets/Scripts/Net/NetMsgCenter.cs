@@ -11,6 +11,7 @@ public class NetMsgCenter : MonoBehaviour
     public void Awake()
     {
         Instance = this;
+        DontDestroyOnLoad(gameObject);
         client = new ClientPeer();
         client.Connect("127.0.0.1",6666);
     }

@@ -17,16 +17,23 @@ public class AccountHandler : BaseHandler {
                 Login_SRES((int)value);
                 break;
             case AccountCode.GetUserInfo_SRES:
-                Models.GameModel.userDto = (UserDto)value;
-                GetUserInfo_SRES();
+                GetUserInfo_SRES((UserDto)value);
+                break;
+            case AccountCode.GetRankList_SRES:
+                GetRankList_SRES((RankListDto)value);
                 break;
             default:
                 break;
         }
     }
 
-    private void GetUserInfo_SRES()
+    private void GetRankList_SRES(RankListDto value)
     {
+        EventCenter.Broadcast(EventDefine.SendRankListDto, value);
+    }
+    private void GetUserInfo_SRES(UserDto value)
+    {
+        Models.GameModel.userDto = value;
         //跳转到主场景
         SceneManager.LoadScene("2.Main");
     }

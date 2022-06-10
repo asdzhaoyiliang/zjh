@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\UI\Hint.cs" />
      <Compile Include="Assets\Scripts\UI\LoginPanel.cs" />
      <Compile Include="Assets\Scripts\UI\MainPanel.cs" />
+     <Compile Include="Assets\Scripts\UI\RankListPanel.cs" />
      <Compile Include="Assets\Scripts\UI\RegisterPanel.cs" />
      <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
      <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />

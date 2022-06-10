@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Protocol.Code;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +26,13 @@ public class MainPanel : MonoBehaviour
         txt_CoinCount = transform.Find("txt_CoinCount").GetComponent<Text>();
         headIcon = transform.Find("mask/headIcon").GetComponent<Image>();
         btn_Rank = transform.Find("btn_Rank").GetComponent<Button>();
+        btn_Rank.onClick.AddListener(() =>
+        {
+            //向服务器发送获取排行榜的请求
+            NetMsgCenter.Instance.SendMsg(OpCode.Account, AccountCode.GetRankList_CREQ, null);
+            //广播显示排行榜界面事件码
+            EventCenter.Broadcast(EventDefine.ShowRankListPanel);
+        });
         btn_Bank = transform.Find("btn_Bank").GetComponent<Button>();
         btn_Stand = transform.Find("btn_Stand").GetComponent<Button>();
         btn_Online = transform.Find("btn_Online").GetComponent<Button>();
