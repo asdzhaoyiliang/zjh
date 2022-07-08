@@ -17,6 +17,7 @@ public class MainPanel : MonoBehaviour
 
     public void Awake()
     {
+        EventCenter.AddListener(EventDefine.UpdateCoinCount,UpdateCoinCount);
         Init();
     }
 
@@ -34,11 +35,25 @@ public class MainPanel : MonoBehaviour
             EventCenter.Broadcast(EventDefine.ShowRankListPanel);
         });
         btn_Bank = transform.Find("btn_Bank").GetComponent<Button>();
+        btn_Bank.onClick.AddListener(() =>
+        {
+            EventCenter.Broadcast(EventDefine.ShowRechargePanel);
+        });
         btn_Stand = transform.Find("btn_Stand").GetComponent<Button>();
         btn_Online = transform.Find("btn_Online").GetComponent<Button>();
 
         txt_UserName.text = Models.GameModel.userDto.UserName;
         txt_CoinCount.text = Models.GameModel.userDto.CoinCount.ToString();
         headIcon.sprite = ResourcesManager.GetSprite(Models.GameModel.userDto.IconName);
+    }
+
+    private void OnDestroy()
+    {
+        EventCenter.RemoveListener(EventDefine.UpdateCoinCount, UpdateCoinCount);
+    }
+
+    private void UpdateCoinCount()
+    {
+        txt_CoinCount.text = Models.GameModel.userDto.CoinCount.ToString();
     }
 }

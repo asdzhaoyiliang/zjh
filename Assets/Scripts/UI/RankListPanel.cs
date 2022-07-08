@@ -11,10 +11,11 @@ public class RankListPanel : MonoBehaviour
     public GameObject go_ItemPrefab;
     private Button btn_Close;
     private Transform m_Parent;
+
     public void Awake()
     {
-        EventCenter.AddListener(EventDefine.ShowRankListPanel,Show);
-        EventCenter.AddListener<RankListDto>(EventDefine.SendRankListDto,GetRankListDto);
+        EventCenter.AddListener(EventDefine.ShowRankListPanel, Show);
+        EventCenter.AddListener<RankListDto>(EventDefine.SendRankListDto, GetRankListDto);
         btn_Close = transform.Find("btn_Close").GetComponent<Button>();
         btn_Close.onClick.AddListener(OnCloseButtonClick);
         m_Parent = transform.Find("List/ScrollRect/Parent");
@@ -25,7 +26,7 @@ public class RankListPanel : MonoBehaviour
 
     private void OnDestroy()
     {
-        EventCenter.RemoveListener(EventDefine.ShowRankListPanel,Show);
+        EventCenter.RemoveListener(EventDefine.ShowRankListPanel, Show);
     }
 
     private void OnCloseButtonClick()
@@ -47,10 +48,15 @@ public class RankListPanel : MonoBehaviour
     private void GetRankListDto(RankListDto dto)
     {
         if (dto == null) return;
+        for (int i = 0; i < m_Parent.childCount; i++)
+        {
+            Destroy(m_Parent.GetChild(i).gameObject);
+        }
+
         for (int i = 0; i < dto.rankList.Count; i++)
         {
             GameObject go = Instantiate(go_ItemPrefab, m_Parent);
-            go.transform.Find("index/txt_Index").GetComponent<Text>().text = (i +1).ToString();
+            go.transform.Find("index/txt_Index").GetComponent<Text>().text = (i + 1).ToString();
             go.transform.Find("txt_CoinCount").GetComponent<Text>().text = dto.rankList[i].CoinCount.ToString();
             if (dto.rankList[i].UserName == Models.GameModel.userDto.UserName)
             {
@@ -62,8 +68,9 @@ public class RankListPanel : MonoBehaviour
             else
             {
                 go.transform.Find("txt_UserName").GetComponent<Text>().text = dto.rankList[i].UserName;
-
             }
+
+            transform.Find("Scrollbar").GetComponent<Scrollbar>().value = 1;
         }
     }
 }

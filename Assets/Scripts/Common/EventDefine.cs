@@ -5,4 +5,6 @@
     Hint,
     ShowRankListPanel,
     SendRankListDto,
+    ShowRechargePanel,
+    UpdateCoinCount,
 }
