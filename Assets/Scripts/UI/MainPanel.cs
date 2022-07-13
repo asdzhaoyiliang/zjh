@@ -43,7 +43,10 @@ public class MainPanel : MonoBehaviour
             EventCenter.Broadcast(EventDefine.ShowRoomChoosePanel, GameType.StandAlone);
         });
         btn_Online = transform.Find("btn_Online").GetComponent<Button>();
-        btn_Online.onClick.AddListener(() => { EventCenter.Broadcast(EventDefine.ShowRoomChoosePanel, GameType.Net); });
+        btn_Online.onClick.AddListener(() =>
+        {
+            EventCenter.Broadcast(EventDefine.ShowRoomChoosePanel, GameType.Net);
+        });
 
         txt_UserName.text = Models.GameModel.userDto.UserName;
         txt_CoinCount.text = Models.GameModel.userDto.CoinCount.ToString();

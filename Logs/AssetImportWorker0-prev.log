@@ -15,11 +15,11 @@ E:/zjh/zjh_client
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-64231
+49208
 Successfully changed project path to: E:/zjh/zjh_client
 E:/zjh/zjh_client
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 41.05 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 43.59 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.6f1 (8a2143876886)
 [Subsystems] Discovering subsystems at path E:/Program Files/Uninty2020/Editor/Data/Resources/UnitySubsystems
@@ -35,736 +35,106 @@ Initialize mono
 Mono path[0] = 'E:/Program Files/Uninty2020/Editor/Data/Managed'
 Mono path[1] = 'E:/Program Files/Uninty2020/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'E:/Program Files/Uninty2020/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56028
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56988
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Program Files/Uninty2020/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001847 seconds.
+Registered in 0.001838 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 32.69 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 39.39 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.987 seconds
+- Completed reload, in  1.028 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006953 seconds.
+Registered in 0.006553 seconds.
 Begin MonoManager ReloadAssembly
 OnLevelWasLoaded was found on DOTweenComponent
 This message has been deprecated and will be removed in a later version of Unity.
 Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
 
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.846 seconds
+- Completed reload, in  0.826 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1436 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.7 MB.
-System memory in use after: 65.8 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 1867.
-Total: 1.862400 ms (FindLiveObjects: 0.330600 ms CreateObjectMapping: 0.067900 ms MarkObjects: 1.397200 ms  DeleteObjects: 0.065100 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Scenes/1.Start.unity
-  artifactKey: Guid(9e63840bce81f45c58733e2bbb57c8a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/1.Start.unity using Guid(9e63840bce81f45c58733e2bbb57c8a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c31bf51986cc191055b4389f644109a8') in 0.011010 seconds
-  Import took 0.013075 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006483 seconds.
-OnLevelWasLoaded was found on DOTweenComponent
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Begin MonoManager ReloadAssembly
-OnLevelWasLoaded was found on DOTweenComponent
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.812 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1430 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.6 MB.
-System memory in use after: 65.7 MB.
-
-Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 1869.
-Total: 2.478100 ms (FindLiveObjects: 0.257500 ms CreateObjectMapping: 0.093900 ms MarkObjects: 2.092800 ms  DeleteObjects: 0.032400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007716 seconds.
-OnLevelWasLoaded was found on DOTweenComponent
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Begin MonoManager ReloadAssembly
-OnLevelWasLoaded was found on DOTweenComponent
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.963 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1430 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.6 MB.
-System memory in use after: 65.7 MB.
-
-Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 1871.
-Total: 1.829000 ms (FindLiveObjects: 0.265200 ms CreateObjectMapping: 0.093900 ms MarkObjects: 1.446800 ms  DeleteObjects: 0.021400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 775.662651 seconds.
-  path: Assets/Scenes/2.Main.unity
-  artifactKey: Guid(7279b66f50827184ab40d59f9fe2843b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/2.Main.unity using Guid(7279b66f50827184ab40d59f9fe2843b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3afb7988cd4174608e7b0a079c622bd') in 0.010789 seconds
-  Import took 0.013235 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 228.155153 seconds.
-  path: Assets/Res/Textures/zjh_PC.png
-  artifactKey: Guid(0d03112e2e7c2984fbfb8a14b2d73797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/zjh_PC.png using Guid(0d03112e2e7c2984fbfb8a14b2d73797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d12d786e55d171156452d06761649f2') in 0.175362 seconds
-  Import took 0.177676 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Res/Textures/poke/card_0_3.tga
-  artifactKey: Guid(74e0316d35cabde4bb3742cfa3100f95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_0_3.tga using Guid(74e0316d35cabde4bb3742cfa3100f95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a1388cd6e7e4eca2582ebb523956891') in 0.016689 seconds
-  Import took 0.018722 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/Res/Textures/zjh_PC.png
-  artifactKey: Guid(0d03112e2e7c2984fbfb8a14b2d73797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/zjh_PC.png using Guid(0d03112e2e7c2984fbfb8a14b2d73797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d12d786e55d171156452d06761649f2') in 0.078419 seconds
-  Import took 0.080674 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Res/Textures/poke/card_0_2.tga
-  artifactKey: Guid(a58d84532b7895d4eac403aa5da597c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_0_2.tga using Guid(a58d84532b7895d4eac403aa5da597c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13895fbe5caca18509e5e845b3b4ad78') in 0.007938 seconds
-  Import took 0.009993 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Res/Textures/a3.psd
-  artifactKey: Guid(a8c3b252d62879c45b1efdb9cca65ccd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/a3.psd using Guid(a8c3b252d62879c45b1efdb9cca65ccd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be9b0444bc3f56db67ca4760e0459fca') in 0.017282 seconds
-  Import took 0.020161 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000189 seconds.
-  path: Assets/Res/Textures/poke/card_0_4.tga
-  artifactKey: Guid(ad5b51d322be7b143ac94c02f143fdf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_0_4.tga using Guid(ad5b51d322be7b143ac94c02f143fdf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0b03226c5f65dcf9f1440a1696c4686') in 0.007904 seconds
-  Import took 0.010088 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.128278 seconds.
-  path: Assets/Res/Textures/poke/card_0_5.tga
-  artifactKey: Guid(5e2e466710270a84bba73d08fb7da5b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_0_5.tga using Guid(5e2e466710270a84bba73d08fb7da5b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abbbfd38ba8312dcda5fc72294c642e2') in 0.009504 seconds
-  Import took 0.011689 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000185 seconds.
-  path: Assets/Res/Textures/poke/card_0_6.tga
-  artifactKey: Guid(533e6d6cc41428341aafc157323891d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_0_6.tga using Guid(533e6d6cc41428341aafc157323891d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cb156824c74ea2fd8fd91f2bb4b7257') in 0.008570 seconds
-  Import took 0.010509 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.129690 seconds.
-  path: Assets/Res/Textures/poke/card_0_7.tga
-  artifactKey: Guid(4edb46d1c72bcd648bf5510b8c772f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_0_7.tga using Guid(4edb46d1c72bcd648bf5510b8c772f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '741e39ecc92381c976412ee2fca3808e') in 0.009241 seconds
-  Import took 0.011370 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/Res/Textures/poke/card_0_8.tga
-  artifactKey: Guid(d53476a908e36cf4d87e972935ef380a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_0_8.tga using Guid(d53476a908e36cf4d87e972935ef380a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f4e65823f81149b12686b551ab15b42') in 0.007757 seconds
-  Import took 0.009651 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.309375 seconds.
-  path: Assets/Res/Textures/poke/card_0_9.tga
-  artifactKey: Guid(db8f8022f49a6654fb5a306c5f9b4c6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_0_9.tga using Guid(db8f8022f49a6654fb5a306c5f9b4c6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '679107a378235551d437ecbbb6ff651a') in 0.007667 seconds
-  Import took 0.009807 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Res/Textures/poke/card_0_10.tga
-  artifactKey: Guid(0469878e42e7ce849913045c8c9fb5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_0_10.tga using Guid(0469878e42e7ce849913045c8c9fb5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '104e29c033207c4b457543890040cbd2') in 0.009216 seconds
-  Import took 0.011226 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.288456 seconds.
-  path: Assets/Res/Textures/poke/card_0_11.tga
-  artifactKey: Guid(ea1724b9b733c764f8a281b9e6832a97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_0_11.tga using Guid(ea1724b9b733c764f8a281b9e6832a97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54ed1df04f42c6be486d0bc410a64401') in 0.009139 seconds
-  Import took 0.011303 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/Res/Textures/poke/card_0_12.tga
-  artifactKey: Guid(f958a0dc79408784baee7552f67b7645) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_0_12.tga using Guid(f958a0dc79408784baee7552f67b7645) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '147a3bc8360dbb1b2a17c64e1a776015') in 0.010078 seconds
-  Import took 0.011970 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.079578 seconds.
-  path: Assets/Res/Textures/poke/card_0_13.tga
-  artifactKey: Guid(f4af2dff7596a66478fdab643a0c930c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_0_13.tga using Guid(f4af2dff7596a66478fdab643a0c930c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e9ee9c0a8ef121d1417973395d49a69') in 0.009760 seconds
-  Import took 0.011992 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/Res/Textures/poke/card_0_14.tga
-  artifactKey: Guid(71fb47f8cf9d23b4daf7dbcb51090526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_0_14.tga using Guid(71fb47f8cf9d23b4daf7dbcb51090526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '057edf26d8accb20d06b425c0dc489b2') in 0.007958 seconds
-  Import took 0.009933 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.265793 seconds.
-  path: Assets/Res/Textures/poke/card_1_2.tga
-  artifactKey: Guid(a117ec14f5456754bbb8023c3fb8158d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_1_2.tga using Guid(a117ec14f5456754bbb8023c3fb8158d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '254940b0726e9458d70f16b99bc68270') in 0.008465 seconds
-  Import took 0.010661 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000206 seconds.
-  path: Assets/Res/Textures/poke/card_1_3.tga
-  artifactKey: Guid(4f746b61849798545aae119aadb9c16f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_1_3.tga using Guid(4f746b61849798545aae119aadb9c16f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58a952feb4a460ae16983bf29bd57d09') in 0.007844 seconds
-  Import took 0.009830 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.291206 seconds.
-  path: Assets/Res/Textures/poke/card_1_4.tga
-  artifactKey: Guid(33f0611418eb0a648bf4ab7a90da2a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_1_4.tga using Guid(33f0611418eb0a648bf4ab7a90da2a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2ab64c6e275fef69091862d30564556') in 0.008485 seconds
-  Import took 0.010623 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000189 seconds.
-  path: Assets/Res/Textures/poke/card_1_5.tga
-  artifactKey: Guid(af521fc4279edc84d9e0f6c2ee026bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_1_5.tga using Guid(af521fc4279edc84d9e0f6c2ee026bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae2dd27866e568ba9d53400c172e97d3') in 0.008407 seconds
-  Import took 0.010393 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.067099 seconds.
-  path: Assets/Res/Textures/poke/card_1_6.tga
-  artifactKey: Guid(265ee325acc73cd43812e7028e4d8478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_1_6.tga using Guid(265ee325acc73cd43812e7028e4d8478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4343d90c02175c63e2cc3e502f131a74') in 0.009406 seconds
-  Import took 0.011548 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000184 seconds.
-  path: Assets/Res/Textures/poke/card_1_7.tga
-  artifactKey: Guid(2ce90ea0eaf512d4b9f51086e1329116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_1_7.tga using Guid(2ce90ea0eaf512d4b9f51086e1329116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70b36fdb633f621e9d2c6ca0402ac6c8') in 0.008135 seconds
-  Import took 0.010010 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.355791 seconds.
-  path: Assets/Res/Textures/poke/card_1_8.tga
-  artifactKey: Guid(a1385522deaaec94bbe29398eb5cd663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_1_8.tga using Guid(a1385522deaaec94bbe29398eb5cd663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9c4bbcb9118207ea9e8ea755389ba32') in 0.008386 seconds
-  Import took 0.010519 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000182 seconds.
-  path: Assets/Res/Textures/poke/card_1_9.tga
-  artifactKey: Guid(29ae1dec735031041b224b3614f3ffc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_1_9.tga using Guid(29ae1dec735031041b224b3614f3ffc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dca6fe1a97b80dfaf9f871ef48cae88') in 0.008081 seconds
-  Import took 0.010007 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.046363 seconds.
-  path: Assets/Res/Textures/poke/card_1_10.tga
-  artifactKey: Guid(86ba3bd8c47c55f488f757ec2532e499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_1_10.tga using Guid(86ba3bd8c47c55f488f757ec2532e499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d0b82a71ed0f36e2b283948a793463d') in 0.009071 seconds
-  Import took 0.011184 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000181 seconds.
-  path: Assets/Res/Textures/poke/card_1_11.tga
-  artifactKey: Guid(7c6dc159f68688645822cb0400a61ad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_1_11.tga using Guid(7c6dc159f68688645822cb0400a61ad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52a1a5564e6ead8d56ec6d817e88290d') in 0.011055 seconds
-  Import took 0.012984 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.372388 seconds.
-  path: Assets/Res/Textures/poke/card_1_12.tga
-  artifactKey: Guid(44bf96ea6365d05488d6b9393ad49066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_1_12.tga using Guid(44bf96ea6365d05488d6b9393ad49066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2659ef340747e09f2eb716126297764') in 0.008645 seconds
-  Import took 0.010977 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000218 seconds.
-  path: Assets/Res/Textures/poke/card_1_13.tga
-  artifactKey: Guid(8136503e4b66a714080079df0f9e0a2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_1_13.tga using Guid(8136503e4b66a714080079df0f9e0a2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ce96e0cc59e1f6e03dad87e7b95745b') in 0.009133 seconds
-  Import took 0.011150 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.025868 seconds.
-  path: Assets/Res/Textures/poke/card_1_14.tga
-  artifactKey: Guid(a5794fe2d53ad764daef14f22206763b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_1_14.tga using Guid(a5794fe2d53ad764daef14f22206763b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d8d6d62e4e145a920efd8d6bc88b0c1') in 0.009862 seconds
-  Import took 0.012242 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Res/Textures/poke/card_2_2.tga
-  artifactKey: Guid(7e36aa6493f502040b2719d484bf29b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_2_2.tga using Guid(7e36aa6493f502040b2719d484bf29b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a043728ba619d259066017a0ffe0baf1') in 0.011614 seconds
-  Import took 0.013651 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.026466 seconds.
-  path: Assets/Res/Textures/poke/card_2_3.tga
-  artifactKey: Guid(53032866abf774d48b7d1015f982a51a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_2_3.tga using Guid(53032866abf774d48b7d1015f982a51a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8b12c264a3204969ac2481c3b05bd58') in 0.008269 seconds
-  Import took 0.010944 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000181 seconds.
-  path: Assets/Res/Textures/poke/card_2_4.tga
-  artifactKey: Guid(ce692db7b58d52d4fa45f509274c6ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_2_4.tga using Guid(ce692db7b58d52d4fa45f509274c6ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61c44d8b26c6146811fea414e485ad41') in 0.009391 seconds
-  Import took 0.011604 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.326499 seconds.
-  path: Assets/Res/Textures/poke/card_2_5.tga
-  artifactKey: Guid(63d26e29c740a384ca5dea6ada1bb4b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_2_5.tga using Guid(63d26e29c740a384ca5dea6ada1bb4b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56ae50eaf246ec9f1d0234e020fb2005') in 0.009067 seconds
-  Import took 0.011663 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/Res/Textures/poke/card_2_6.tga
-  artifactKey: Guid(76b807d01bbef064e94244cc64b19140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_2_6.tga using Guid(76b807d01bbef064e94244cc64b19140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd98d0a25a539ea25c052ce6fc1bc6a22') in 0.009924 seconds
-  Import took 0.011989 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.031270 seconds.
-  path: Assets/Res/Textures/poke/card_2_7.tga
-  artifactKey: Guid(4273d87fd375db04ab07b0011bb43b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_2_7.tga using Guid(4273d87fd375db04ab07b0011bb43b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08ec4d2861904435c5a53f8ee6eac722') in 0.009217 seconds
-  Import took 0.011631 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Assets/Res/Textures/poke/card_2_8.tga
-  artifactKey: Guid(a2a7a5126bb57d2438b2a555f3d06b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_2_8.tga using Guid(a2a7a5126bb57d2438b2a555f3d06b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f1204ade6742e6a2ef059c98088bb76') in 0.010630 seconds
-  Import took 0.012953 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.032646 seconds.
-  path: Assets/Res/Textures/poke/card_2_9.tga
-  artifactKey: Guid(41d13390bebd4c74a9e2dba04c7940f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_2_9.tga using Guid(41d13390bebd4c74a9e2dba04c7940f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0642d23330e0a115e3af90283fe7a68') in 0.010466 seconds
-  Import took 0.012819 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000203 seconds.
-  path: Assets/Res/Textures/poke/card_2_10.tga
-  artifactKey: Guid(ec32a5511f770ed43807fab59f008435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_2_10.tga using Guid(ec32a5511f770ed43807fab59f008435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8e6f9006487f45d4bddfbec6fd34967') in 0.010894 seconds
-  Import took 0.012895 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.296729 seconds.
-  path: Assets/Res/Textures/poke/card_2_11.tga
-  artifactKey: Guid(03a2cfc5f50b92040b1c1507d898c77d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_2_11.tga using Guid(03a2cfc5f50b92040b1c1507d898c77d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43f30906d34074930fa8805ac6829a1d') in 0.009939 seconds
-  Import took 0.012415 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/Res/Textures/poke/card_2_12.tga
-  artifactKey: Guid(edd1b7dcdcf3b044a9e3e52395b2d69a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_2_12.tga using Guid(edd1b7dcdcf3b044a9e3e52395b2d69a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36166c2b22885e074b6b790110a4c629') in 0.010175 seconds
-  Import took 0.012172 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Res/Textures/poke/card_2_13.tga
-  artifactKey: Guid(de0598833ed741f4a8e395bd1c9c1544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_2_13.tga using Guid(de0598833ed741f4a8e395bd1c9c1544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc3841d3323cd4690d7dc0e37cdb43c3') in 0.010929 seconds
-  Import took 0.013045 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000231 seconds.
-  path: Assets/Res/Textures/poke/card_2_14.tga
-  artifactKey: Guid(957495b785772204ea5e0fb117b877c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_2_14.tga using Guid(957495b785772204ea5e0fb117b877c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ccf20c72a6996152267fe89470ce69e') in 0.009387 seconds
-  Import took 0.011552 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.026509 seconds.
-  path: Assets/Res/Textures/poke/card_3_2.tga
-  artifactKey: Guid(7548cd841ceb08d4f8c0bacde399c9f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_3_2.tga using Guid(7548cd841ceb08d4f8c0bacde399c9f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce62d2f38f73a51191853f71428680a1') in 0.008560 seconds
-  Import took 0.011232 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Res/Textures/poke/card_3_3.tga
-  artifactKey: Guid(753ccf952769e1944b2944ec98fa8951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_3_3.tga using Guid(753ccf952769e1944b2944ec98fa8951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04167d1d8a2568175c0967bade2bee20') in 0.009270 seconds
-  Import took 0.011461 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.244735 seconds.
-  path: Assets/Res/Textures/poke/card_3_4.tga
-  artifactKey: Guid(dae55c8ae5fbb884089729b6e090db0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_3_4.tga using Guid(dae55c8ae5fbb884089729b6e090db0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb2cf3aaccb0f53677d16315d04d176a') in 0.007884 seconds
-  Import took 0.010071 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/Res/Textures/poke/card_3_5.tga
-  artifactKey: Guid(91b84408eb497fc4eb1fc9b2f6c2a4c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_3_5.tga using Guid(91b84408eb497fc4eb1fc9b2f6c2a4c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b6c74a71247dead015efb007e1f6b52') in 0.008549 seconds
-  Import took 0.010727 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.044874 seconds.
-  path: Assets/Res/Textures/poke/card_3_6.tga
-  artifactKey: Guid(2d50798f2ed791846a9526a0b1f8eac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_3_6.tga using Guid(2d50798f2ed791846a9526a0b1f8eac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15c060afdbe64ddd6da977223a181446') in 0.008846 seconds
-  Import took 0.011080 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/Res/Textures/poke/card_3_7.tga
-  artifactKey: Guid(4890760b415fa034fb09f84e2537df05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_3_7.tga using Guid(4890760b415fa034fb09f84e2537df05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acc66af50f1f24a7460c1d59866bc265') in 0.008225 seconds
-  Import took 0.010264 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.044388 seconds.
-  path: Assets/Res/Textures/poke/card_3_8.tga
-  artifactKey: Guid(81fcb32bfe3f69944ba048cecb235c88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_3_8.tga using Guid(81fcb32bfe3f69944ba048cecb235c88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0efb932fa8fc01b3dda7593b443b901') in 0.009014 seconds
-  Import took 0.011163 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000189 seconds.
-  path: Assets/Res/Textures/poke/card_3_9.tga
-  artifactKey: Guid(18def180a7c997d41bc38e28091f9024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_3_9.tga using Guid(18def180a7c997d41bc38e28091f9024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a44f1fb393c267d255baa1fe8f4fc1e8') in 0.008868 seconds
-  Import took 0.010895 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.222349 seconds.
-  path: Assets/Res/Textures/poke/card_3_10.tga
-  artifactKey: Guid(dc144bf8410228d4e854f68ca3150454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_3_10.tga using Guid(dc144bf8410228d4e854f68ca3150454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9408e6f5c07af46c3057594e6cf1d2a8') in 0.008733 seconds
-  Import took 0.010910 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Res/Textures/poke/card_3_11.tga
-  artifactKey: Guid(da3f8249e0267f249a106546b98bf035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_3_11.tga using Guid(da3f8249e0267f249a106546b98bf035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bca9dce6d544accae4b78f5c216f24b') in 0.009513 seconds
-  Import took 0.011527 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.019827 seconds.
-  path: Assets/Res/Textures/poke/card_3_12.tga
-  artifactKey: Guid(93dbcb51055c7c7459d845d253524053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_3_12.tga using Guid(93dbcb51055c7c7459d845d253524053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '824c9bfb3f2d60683a8b50009938a015') in 0.010316 seconds
-  Import took 0.012899 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Res/Textures/poke/card_3_13.tga
-  artifactKey: Guid(f8404ccb8edc8d440b808601d40b9798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_3_13.tga using Guid(f8404ccb8edc8d440b808601d40b9798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '972c055bd2163188895f5ba734cb1d7d') in 0.009771 seconds
-  Import took 0.011882 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003886 seconds.
-  path: Assets/Res/Textures/poke/card_3_14.tga
-  artifactKey: Guid(3d2dfe8288229d8499fcba017dd52d84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_3_14.tga using Guid(3d2dfe8288229d8499fcba017dd52d84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35a52488cd39df80ecfe2ca03164b2d7') in 0.008081 seconds
-  Import took 0.010283 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000189 seconds.
-  path: Assets/Res/Textures/poke/card_back.tga
-  artifactKey: Guid(cabfa216437ac1748bda6244f46660a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/poke/card_back.tga using Guid(cabfa216437ac1748bda6244f46660a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53500b950b2e013428a93ca6c1e3fc36') in 0.011809 seconds
-  Import took 0.013920 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.262021 seconds.
-  path: Assets/Res/Textures/Circle-Border-White.psd
-  artifactKey: Guid(c0f6b85acbddaf34c8d7e38f3999bb03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/Circle-Border-White.psd using Guid(c0f6b85acbddaf34c8d7e38f3999bb03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70dff6fa7d355960b3c1afab64e28155') in 0.009923 seconds
-  Import took 0.012096 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000182 seconds.
-  path: Assets/Res/Textures/Circle-Icon.psd
-  artifactKey: Guid(e196cc40d0cbab543b87a755068757d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/Circle-Icon.psd using Guid(e196cc40d0cbab543b87a755068757d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3947702bf28d6fb22d9df69cf9d62606') in 0.010174 seconds
-  Import took 0.012109 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.026927 seconds.
-  path: Assets/Res/Textures/Close-Circle-Icon.psd
-  artifactKey: Guid(3466315aca333ce45b22f12da02ab14a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/Close-Circle-Icon.psd using Guid(3466315aca333ce45b22f12da02ab14a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '067eeba54a9798eaae33dc65644fb309') in 0.008774 seconds
-  Import took 0.011285 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.013647 seconds.
-  path: Assets/Res/Textures/Coin-Dollar-Icon.psd
-  artifactKey: Guid(f2f1e0a39b85b1e4193da961328f92ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/Coin-Dollar-Icon.psd using Guid(f2f1e0a39b85b1e4193da961328f92ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43873d8752c74aea96942130fffa736c') in 0.010508 seconds
-  Import took 0.012779 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000187 seconds.
-  path: Assets/Resources/headIcon.png
-  artifactKey: Guid(92d4f5628906cec4597ddc65df657e77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/headIcon.png using Guid(92d4f5628906cec4597ddc65df657e77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1406423e26af03acdc976b016cebb9e') in 0.057724 seconds
-  Import took 0.059725 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.237108 seconds.
-  path: Assets/Res/Textures/Jump-Left-Icon.psd
-  artifactKey: Guid(3bb7d4343311e634493f5e01053a9122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/Jump-Left-Icon.psd using Guid(3bb7d4343311e634493f5e01053a9122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03564da57ac1982a2173196721331b54') in 0.008895 seconds
-  Import took 0.011181 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Res/Textures/login_bg.png
-  artifactKey: Guid(677f44e77f02fe74a8222d948de79121) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/login_bg.png using Guid(677f44e77f02fe74a8222d948de79121) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae076e212a0fe1a9b4c76fa2f0dbed82') in 0.010580 seconds
-  Import took 0.012518 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000189 seconds.
-  path: Assets/Res/Textures/Jump-Left-Icon.psd
-  artifactKey: Guid(3bb7d4343311e634493f5e01053a9122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/Jump-Left-Icon.psd using Guid(3bb7d4343311e634493f5e01053a9122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03564da57ac1982a2173196721331b54') in 0.007598 seconds
-  Import took 0.009662 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.403451 seconds.
-  path: Assets/Res/Textures/mainBg.png
-  artifactKey: Guid(aa94bb7ee99ce0a45a99363217e4dc0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/mainBg.png using Guid(aa94bb7ee99ce0a45a99363217e4dc0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a83dd146223f62cf0afea5e4e8f852dc') in 0.009026 seconds
-  Import took 0.011677 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.652379 seconds.
-  path: Assets/Res/Textures/undefined.png
-  artifactKey: Guid(98212560e9e3041488e3219cdbaf676a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/undefined.png using Guid(98212560e9e3041488e3219cdbaf676a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cabf39f6259200ca66a94e05ad0254c') in 0.019853 seconds
-  Import took 0.022262 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.531837 seconds.
-  path: Assets/Res/Textures/White-Button.psd
-  artifactKey: Guid(1dfea951109e75b40b6788d247ed2bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/White-Button.psd using Guid(1dfea951109e75b40b6788d247ed2bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0baa9a816ec73c085e51de0143ee62f7') in 0.009302 seconds
-  Import took 0.011534 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000228 seconds.
-  path: Assets/Res/Textures/White-Button-Outline.psd
-  artifactKey: Guid(0cc26a3c21e28bf438f4009af5052315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/White-Button-Outline.psd using Guid(0cc26a3c21e28bf438f4009af5052315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '229e588e8e304e2f541bada84d36739f') in 0.009931 seconds
-  Import took 0.012053 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.446212 seconds.
-  path: Assets/Res/Textures/White-Button-Rounded.psd
-  artifactKey: Guid(d9532973f208c7241a30d799e8be7900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/White-Button-Rounded.psd using Guid(d9532973f208c7241a30d799e8be7900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46dcf00c918ffb59dbb58225618b6306') in 0.009693 seconds
-  Import took 0.011975 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 365.067317 seconds.
-  path: Assets/Res/Textures/未标题-1.png
-  artifactKey: Guid(012e0e2e1c418d54d9d4f87d4e28d697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Res/Textures/未标题-1.png using Guid(012e0e2e1c418d54d9d4f87d4e28d697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '029e25f0434c758eb041ebdec15f905d') in 0.017716 seconds
-  Import took 0.019918 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 204.362330 seconds.
-  path: Assets/Scripts/UI
-  artifactKey: Guid(2a82545d92220694f80906870dd32f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UI using Guid(2a82545d92220694f80906870dd32f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87696a66cf1833fae67ecfbfe4986819') in 0.002884 seconds
-  Import took 0.005036 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.009140 seconds.
-  path: Assets/Scripts/UI/RoomChoosePanel.cs
-  artifactKey: Guid(1228791e07b9b784c945f08ebe6730f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UI/RoomChoosePanel.cs using Guid(1228791e07b9b784c945f08ebe6730f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ec00a27e562e63f3d41da4c36e65082') in 0.005837 seconds
-  Import took 0.008193 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005837 seconds.
-OnLevelWasLoaded was found on DOTweenComponent
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Begin MonoManager ReloadAssembly
-OnLevelWasLoaded was found on DOTweenComponent
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Native extension for WindowsStandalone target not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
 Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.824 seconds
-Platform modules already initialized, skipping
+Unloading 1438 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 65.6 MB.
+System memory in use after: 65.6 MB.
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 1867.
+Total: 1.832200 ms (FindLiveObjects: 0.177100 ms CreateObjectMapping: 0.050600 ms MarkObjects: 1.538400 ms  DeleteObjects: 0.064800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/Game/StandAlone/SelfManager.cs
+  artifactKey: Guid(b73895db104e4e24b989eaa7d04f1362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Game/StandAlone/SelfManager.cs using Guid(b73895db104e4e24b989eaa7d04f1362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e296e661862877ee2e6385997e9974d') in 0.020341 seconds
+  Import took 0.022428 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.594382 seconds.
+  path: Assets/Scripts/Game/StandAlone/SelfManager_Stand.cs
+  artifactKey: Guid(f22f5b23ddda07b4ba13ff8e4ec3ba79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Game/StandAlone/SelfManager_Stand.cs using Guid(f22f5b23ddda07b4ba13ff8e4ec3ba79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a99307b5fd1130aac15904fdc69fb00') in 0.003296 seconds
+  Import took 0.005410 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 64.475813 seconds.
+  path: Assets/Scripts/Game/StandAlone/SelfManagerStand.cs
+  artifactKey: Guid(d0e92453b568b27459b04241ce137776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Game/StandAlone/SelfManagerStand.cs using Guid(d0e92453b568b27459b04241ce137776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e3e11631a8f41b842cd848bbaf541b5') in 0.003213 seconds
+  Import took 0.005382 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005755 seconds.
+OnLevelWasLoaded was found on DOTweenComponent
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Begin MonoManager ReloadAssembly
+OnLevelWasLoaded was found on DOTweenComponent
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1431 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69.0 MB.
-System memory in use after: 69.1 MB.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.799 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1433 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 65.5 MB.
+System memory in use after: 65.6 MB.
 
-Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 2007.
-Total: 1.604100 ms (FindLiveObjects: 0.200200 ms CreateObjectMapping: 0.061300 ms MarkObjects: 1.320600 ms  DeleteObjects: 0.020900 ms)
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 1870.
+Total: 1.534700 ms (FindLiveObjects: 0.184500 ms CreateObjectMapping: 0.050600 ms MarkObjects: 1.279100 ms  DeleteObjects: 0.019400 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005969 seconds.
+Registered in 0.005713 seconds.
 OnLevelWasLoaded was found on DOTweenComponent
 This message has been deprecated and will be removed in a later version of Unity.
 Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
@@ -781,141 +151,15 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.786 seconds
+- Completed reload, in  0.807 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1431 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69.0 MB.
-System memory in use after: 69.2 MB.
+System memory in use before: 65.5 MB.
+System memory in use after: 65.6 MB.
 
-Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 2009.
-Total: 1.635300 ms (FindLiveObjects: 0.204500 ms CreateObjectMapping: 0.048400 ms MarkObjects: 1.359100 ms  DeleteObjects: 0.022400 ms)
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 1872.
+Total: 1.570800 ms (FindLiveObjects: 0.166700 ms CreateObjectMapping: 0.044900 ms MarkObjects: 1.339800 ms  DeleteObjects: 0.018600 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 1657.038435 seconds.
-  path: Assets/Scenes/2.MainSettings.lighting
-  artifactKey: Guid(cc154949a7fee9a4cb6c58c23157c833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/2.MainSettings.lighting using Guid(cc154949a7fee9a4cb6c58c23157c833) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 0.
- -> (artifact id: '76b0a64093c25753baf519c037027179') in 0.014557 seconds
-  Import took 0.016756 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005430 seconds.
-  path: Assets/Scenes/2.MainSettings.lighting
-  artifactKey: Guid(cc154949a7fee9a4cb6c58c23157c833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/2.MainSettings.lighting using Guid(cc154949a7fee9a4cb6c58c23157c833) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 0.
- -> (artifact id: '76b0a64093c25753baf519c037027179') in 0.003254 seconds
-  Import took 0.006025 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.001321 seconds.
-  path: Assets/Scenes/2.Main.unity
-  artifactKey: Guid(7279b66f50827184ab40d59f9fe2843b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/2.Main.unity using Guid(7279b66f50827184ab40d59f9fe2843b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f566d337a062a08857cd5d720896e0d') in 0.002685 seconds
-  Import took 0.004810 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000228 seconds.
-  path: Assets/Scenes/2.Main.unity
-  artifactKey: Guid(7279b66f50827184ab40d59f9fe2843b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/2.Main.unity using Guid(7279b66f50827184ab40d59f9fe2843b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f566d337a062a08857cd5d720896e0d') in 0.002520 seconds
-  Import took 0.004570 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005636 seconds.
-OnLevelWasLoaded was found on DOTweenComponent
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Begin MonoManager ReloadAssembly
-OnLevelWasLoaded was found on DOTweenComponent
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.786 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1431 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69.1 MB.
-System memory in use after: 69.2 MB.
-
-Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 2011.
-Total: 1.685600 ms (FindLiveObjects: 0.179100 ms CreateObjectMapping: 0.055600 ms MarkObjects: 1.428900 ms  DeleteObjects: 0.020600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006517 seconds.
-OnLevelWasLoaded was found on DOTweenComponent
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Begin MonoManager ReloadAssembly
-OnLevelWasLoaded was found on DOTweenComponent
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.824 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1431 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69.1 MB.
-System memory in use after: 69.2 MB.
-
-Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 2013.
-Total: 1.959900 ms (FindLiveObjects: 0.278300 ms CreateObjectMapping: 0.085600 ms MarkObjects: 1.551600 ms  DeleteObjects: 0.043300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005973 seconds.
-OnLevelWasLoaded was found on DOTweenComponent
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Begin MonoManager ReloadAssembly
-OnLevelWasLoaded was found on DOTweenComponent
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.790 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1432 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69.1 MB.
-System memory in use after: 69.2 MB.
-
-Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 2016.
-Total: 1.874800 ms (FindLiveObjects: 0.236100 ms CreateObjectMapping: 0.056300 ms MarkObjects: 1.554800 ms  DeleteObjects: 0.025900 ms)
-
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

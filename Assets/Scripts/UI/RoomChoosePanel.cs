@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Common;
 using DG.Tweening;
+using Protocol.Code;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,6 +56,7 @@ public class RoomChoosePanel : MonoBehaviour
         switch (m_gameType)
         {
             case GameType.Net:
+                // NetMsgCenter.Instance.SendMsg(OpCode.Match, AccountCode.Login_CREQ,);
                 break;
             case GameType.StandAlone:
                 break;

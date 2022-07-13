@@ -76,6 +76,9 @@
      <Compile Include="Assets\Scripts\Common\EventCenter.cs" />
      <Compile Include="Assets\Scripts\UI\RegisterPanel.cs" />
      <Compile Include="Assets\Scripts\Common\ResourcesManager.cs" />
+     <Compile Include="Assets\Scripts\Game\StandAlone\SelfManager_Stand.cs" />
+     <Compile Include="Assets\Scripts\Game\StandAlone\LeftManager_Stand.cs" />
+     <Compile Include="Assets\Scripts\Game\StandAlone\RightManager_Stand.cs" />
      <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
      <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
      <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
