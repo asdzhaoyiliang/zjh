@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Common;
 using Protocol.Code;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +18,7 @@ public class MainPanel : MonoBehaviour
 
     public void Awake()
     {
-        EventCenter.AddListener(EventDefine.UpdateCoinCount,UpdateCoinCount);
+        EventCenter.AddListener(EventDefine.UpdateCoinCount, UpdateCoinCount);
         Init();
     }
 
@@ -35,12 +36,14 @@ public class MainPanel : MonoBehaviour
             EventCenter.Broadcast(EventDefine.ShowRankListPanel);
         });
         btn_Bank = transform.Find("btn_Bank").GetComponent<Button>();
-        btn_Bank.onClick.AddListener(() =>
-        {
-            EventCenter.Broadcast(EventDefine.ShowRechargePanel);
-        });
+        btn_Bank.onClick.AddListener(() => { EventCenter.Broadcast(EventDefine.ShowRechargePanel); });
         btn_Stand = transform.Find("btn_Stand").GetComponent<Button>();
+        btn_Stand.onClick.AddListener(() =>
+        {
+            EventCenter.Broadcast(EventDefine.ShowRoomChoosePanel, GameType.StandAlone);
+        });
         btn_Online = transform.Find("btn_Online").GetComponent<Button>();
+        btn_Online.onClick.AddListener(() => { EventCenter.Broadcast(EventDefine.ShowRoomChoosePanel, GameType.Net); });
 
         txt_UserName.text = Models.GameModel.userDto.UserName;
         txt_CoinCount.text = Models.GameModel.userDto.CoinCount.ToString();

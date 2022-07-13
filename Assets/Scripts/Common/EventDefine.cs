@@ -7,4 +7,5 @@
     SendRankListDto,
     ShowRechargePanel,
     UpdateCoinCount,
+    ShowRoomChoosePanel,
 }
