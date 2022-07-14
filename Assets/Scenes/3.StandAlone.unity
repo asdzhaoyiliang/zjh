@@ -887,7 +887,7 @@ GameObject:
   - component: {fileID: 297305612}
   - component: {fileID: 297305611}
   m_Layer: 5
-  m_Name: tog_2
+  m_Name: tog_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -959,7 +959,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!114 &297305612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3157,6 +3157,7 @@ GameObject:
   - component: {fileID: 1361493749}
   - component: {fileID: 1361493748}
   - component: {fileID: 1361493747}
+  - component: {fileID: 1361493751}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3248,6 +3249,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1361493751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361493746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7761b278112392c4e92af8833225364b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1362578120
 GameObject:
   m_ObjectHideFlags: 0
@@ -3260,7 +3273,7 @@ GameObject:
   - component: {fileID: 1362578123}
   - component: {fileID: 1362578122}
   m_Layer: 5
-  m_Name: txt_Ready
+  m_Name: txt_GiveUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3318,7 +3331,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5DF2\u51C6\u5907"
+  m_Text: "\u5DF2\u5F03\u724C"
 --- !u!222 &1362578123
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4569,7 +4582,7 @@ GameObject:
   - component: {fileID: 2126545360}
   - component: {fileID: 2126545359}
   m_Layer: 5
-  m_Name: tog_100
+  m_Name: tog_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

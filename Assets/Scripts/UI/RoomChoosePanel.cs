@@ -5,6 +5,7 @@ using Common;
 using DG.Tweening;
 using Protocol.Code;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class RoomChoosePanel : MonoBehaviour
@@ -59,6 +60,7 @@ public class RoomChoosePanel : MonoBehaviour
                 // NetMsgCenter.Instance.SendMsg(OpCode.Match, AccountCode.Login_CREQ,);
                 break;
             case GameType.StandAlone:
+                SceneManager.LoadScene("3.StandAlone");
                 break;
             default:
                 break;
