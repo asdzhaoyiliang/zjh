@@ -25,4 +25,23 @@ public class ResourcesManager
             return temp;
         }
     }
+
+    /// <summary>
+    /// 加载牌的图集
+    /// </summary>
+    /// <param name="cardName"></param>
+    /// <returns></returns>
+    public static Sprite LoadCardSprite(string cardName)
+    {
+        if (nameSpriteDic.ContainsKey(cardName))
+        {
+            return nameSpriteDic[cardName];
+        }
+        else
+        {
+            Sprite sprite = Resources.Load<Sprite>("poke/" + cardName);
+            nameSpriteDic.Add(cardName, sprite);
+            return sprite;
+        }
+    }
 }

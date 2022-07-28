@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\Net\Handler\BaseHandler.cs" />
      <Compile Include="Assets\Scripts\Common\GameType.cs" />
      <Compile Include="Assets\Scripts\Net\Handler\MatchHandler.cs" />
+     <Compile Include="Assets\Scripts\Game\StandAlone\ZjhManager_Stand.cs" />
      <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
      <Compile Include="Assets\Scripts\Net\EncodeTool.cs" />
      <Compile Include="Assets\Scripts\Common\EventDefine.cs" />
@@ -75,11 +76,13 @@
      <Compile Include="Assets\Scripts\Game\StandAlone\RightManager_Stand.cs" />
      <Compile Include="Assets\Scripts\Net\Handler\ChatHandler.cs" />
      <Compile Include="Assets\Scripts\Net\Handler\AccountHandler.cs" />
+     <Compile Include="Assets\Scripts\Common\Card.cs" />
      <Compile Include="Assets\Scripts\Net\ClientPeer.cs" />
      <Compile Include="Assets\Scripts\Common\EventCenter.cs" />
      <Compile Include="Assets\Scripts\UI\RegisterPanel.cs" />
      <Compile Include="Assets\Scripts\Common\ResourcesManager.cs" />
-     <Compile Include="Assets\Scripts\Game\StandAlone\ZjhManager_Stand.cs" />
+     <Compile Include="Assets\Scripts\Common\CardType.cs" />
+     <Compile Include="Assets\Scripts\UI\StakeCountHint.cs" />
      <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
      <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
      <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
