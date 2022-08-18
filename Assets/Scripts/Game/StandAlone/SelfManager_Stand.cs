@@ -6,21 +6,12 @@ using Protocol.Code;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SelfManager_Stand : MonoBehaviour
+public class SelfManager_Stand : BaseManager_Stand
 {
     private GameObject go_BottomButton;
-    private Image img_HeadIcon;
     private Text txt_UserName;
     private Text txt_CoinCount;
-    private Image img_Banker;
-    private GameObject go_CountDown;
-    private Text txt_CountDown;
-    private Text txt_StakeSum;
     private Button btn_Ready;
-    private Text txt_GiveUp;
-    private Transform CardPoints;
-    private ZjhManager_Stand m_ZjhManager;
-    private StakeCountHint m_StakeCountHint;
 
     private Button btn_LookCard;
     private Button btn_FollowStakes;
@@ -30,26 +21,10 @@ public class SelfManager_Stand : MonoBehaviour
     private Toggle tog_2;
     private Toggle tog_5;
     private Toggle tog_10;
+    private GameObject go_CompareBtns;
+    private Button btn_CompareLeft;
+    private Button btn_CompareRight;
 
-    private int m_StakeSum = 0;
-
-    private List<Card> m_CardList = new List<Card>();
-    public GameObject go_CardPre;
-    private int m_CardPointX = -40;
-    private CardType m_CardType;
-
-    private List<GameObject> go_SpawnCardList = new List<GameObject>();
-
-    public bool m_IsGiveUpCard = false;
-    private bool m_IsStartStakes = false;
-    /// <summary>
-    /// 倒计时
-    /// </summary>
-    private float m_Time = 60f;
-    /// <summary>
-    /// 计时器
-    /// </summary>
-    private float m_Timer = 0.0f;
     public void Awake()
     {
         EventCenter.AddListener(EventDefine.UpdateCoinCount, UpdateCoinCount);
@@ -58,6 +33,24 @@ public class SelfManager_Stand : MonoBehaviour
 
     public void FixedUpdate()
     {
+        if (tog_2.isOn)
+        {
+            tog_2.GetComponent<Image>().color = Color.gray;
+            tog_5.GetComponent<Image>().color = Color.white;
+            tog_10.GetComponent<Image>().color = Color.white;
+        }
+        if (tog_5.isOn)
+        {
+            tog_2.GetComponent<Image>().color = Color.white;
+            tog_5.GetComponent<Image>().color = Color.gray;
+            tog_10.GetComponent<Image>().color = Color.white;
+        }
+        if (tog_10.isOn)
+        {
+            tog_2.GetComponent<Image>().color = Color.white;
+            tog_5.GetComponent<Image>().color = Color.white;
+            tog_10.GetComponent<Image>().color = Color.gray;
+        }
         if (m_IsStartStakes)
         {
             if (m_Time <= 0)
@@ -76,6 +69,33 @@ public class SelfManager_Stand : MonoBehaviour
                 txt_CountDown.text = m_Time.ToString();
             }
         }
+    }
+    public override void Win()
+    {
+        m_IsStartStakes = false;
+        go_CountDown.SetActive(false);
+        m_ZjhManager.m_CurrentStakesIndex = 0;
+        m_ZjhManager.SetNextPlayerStakes();
+    }
+    public override void Lose()
+    {
+        OnGiveUpCardButtonClick();
+    }
+
+    private void OnGiveUpCardButtonClick()
+    {
+        m_IsStartStakes = false;
+        go_BottomButton.SetActive(false);
+        go_CountDown.SetActive(false);
+        m_IsGiveUpCard = true;
+        txt_GiveUp.gameObject.SetActive(true);
+        go_CompareBtns.SetActive(false);
+
+        foreach (var item in go_SpawnCardList)
+        {
+            Destroy(item);
+        }
+        m_ZjhManager.SetNextPlayerStakes();
     }
 
     private void Init()
@@ -100,16 +120,32 @@ public class SelfManager_Stand : MonoBehaviour
         btn_FollowStakes = transform.Find("BottomButton/btn_FollowStakes").GetComponent<Button>();
         btn_FollowStakes.onClick.AddListener(OnFollowStakesButtonClick);
         btn_AddStakes = transform.Find("BottomButton/btn_AddStakes").GetComponent<Button>();
+        btn_AddStakes.onClick.AddListener(OnAddStakeButtonClick);
         btn_CompareCard = transform.Find("BottomButton/btn_CompareCard").GetComponent<Button>();
+        btn_CompareCard.onClick.AddListener(OnCompareButtonClick);
         btn_GiveUp = transform.Find("BottomButton/btn_GiveUp").GetComponent<Button>();
+        btn_GiveUp.onClick.AddListener(OnGiveUpCardButtonClick);
         tog_2 = transform.Find("BottomButton/tog_2").GetComponent<Toggle>();
         tog_5 = transform.Find("BottomButton/tog_5").GetComponent<Toggle>();
         tog_10 = transform.Find("BottomButton/tog_10").GetComponent<Toggle>();
+        go_CompareBtns = transform.Find("CompareBtns").gameObject;
+        btn_CompareLeft = transform.Find("CompareBtns/btn_CompareLeft").GetComponent<Button>();
+        btn_CompareRight = transform.Find("CompareBtns/btn_CompareRight").GetComponent<Button>();
 
+        btn_LookCard.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.5f;
+        btn_FollowStakes.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.5f;
+        btn_AddStakes.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.5f;
+        btn_CompareCard.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.5f;
+        btn_GiveUp.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.5f;
+        tog_2.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.5f;
+        tog_5.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.5f;
+        tog_10.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.5f;
+        
         go_BottomButton.SetActive(false);
         img_Banker.gameObject.SetActive(false);
         go_CountDown.SetActive(false);
         txt_GiveUp.gameObject.SetActive(false);
+        go_CompareBtns.SetActive(false);
 
         if (Models.GameModel.userDto != null)
         {
@@ -121,6 +157,39 @@ public class SelfManager_Stand : MonoBehaviour
 
     }
 
+    private void OnCompareButtonClick()
+    {
+        go_CompareBtns.SetActive(true);
+        if (m_ZjhManager.LeftIsGiveUp)
+        {
+            btn_CompareLeft.gameObject.SetActive(true);
+        }
+        if (m_ZjhManager.RightIsGiveUp)
+        {
+            btn_CompareRight.gameObject.SetActive(true);
+        }
+    }
+    private void OnAddStakeButtonClick()
+    {
+        if (tog_2.isOn)
+        {
+            StakesAfter(m_ZjhManager.Stakes(m_ZjhManager.Stakes(0) * 1), "不看");
+        }
+        if (tog_5.isOn)
+        {
+            StakesAfter(m_ZjhManager.Stakes(m_ZjhManager.Stakes(0) * 4), "不看");
+        }
+        if (tog_10.isOn)
+        {
+            StakesAfter(m_ZjhManager.Stakes(m_ZjhManager.Stakes(0) * 9), "不看");
+        }
+
+        m_IsStartStakes = false;
+        go_CountDown.gameObject.SetActive(false);
+        SetBottomButtonInteractable(false);
+        m_ZjhManager.SetNextPlayerStakes();
+        go_CompareBtns.SetActive(false);
+    }
     private void OnFollowStakesButtonClick()
     {
         int stakes = m_ZjhManager.Stakes(0);
@@ -128,7 +197,8 @@ public class SelfManager_Stand : MonoBehaviour
         m_IsStartStakes = false;
         go_CountDown.SetActive(false);
         SetBottomButtonInteractable(false);
-        UpdateCoin(stakes, "不看");
+        StakesAfter(stakes, "不看");
+        go_CompareBtns.SetActive(false);
     }
     private void OnLookCardButtonClick()
     {
@@ -140,11 +210,9 @@ public class SelfManager_Stand : MonoBehaviour
         }
     }
 
-    private void UpdateCoin(int count, string str)
+    public override void StakesAfter(int count, string str)
     {
-        m_StakeCountHint.Show(count + str);
-        m_StakeSum += count;
-        txt_StakeSum.text = m_StakeSum.ToString();
+        base.StakesAfter(count, str);
         if(NetMsgCenter.Instance!=null)
             NetMsgCenter.Instance.SendMsg(OpCode.Account, AccountCode.UpdateCoinCount_CREQ, -count);
     }
@@ -182,85 +250,18 @@ public class SelfManager_Stand : MonoBehaviour
         txt_CoinCount.text = Models.GameModel.userDto.CoinCount.ToString();
     }
 
-    public void BecomeBanker()
-    {
-        img_Banker.gameObject.SetActive(true);
-    }
-
-    public void DealCard(Card card, float duration, Vector3 initPos)
-    {
-        m_CardList.Add(card);
-        GameObject go = Instantiate(go_CardPre, CardPoints);
-        go.GetComponent<RectTransform>().localPosition = initPos;
-        go.GetComponent<RectTransform>().DOLocalMove(new Vector3(m_CardPointX, 0, 0), duration);
-        go_SpawnCardList.Add(go);
-        
-        m_CardPointX += 40;
-    }
-
-    public void DealCardFinished()
+    override public void DealCardFinished()
     {
         go_BottomButton.SetActive(true);
         SetBottomButtonInteractable(false);
-        SortCards();
-        GetCardType();
-        print("self牌型：" + m_CardType);
+        
+        base.DealCardFinished();
     }
 
-    public void StartStakes()
+    public override void StartStakes()
     {
+        base.StartStakes();
         SetBottomButtonInteractable(true);
-        m_IsStartStakes = true;
-        go_CountDown.SetActive(true);
-        txt_CountDown.text = "60";
-        m_Time = 60;
-    }
-    public void SortCards()
-    {
-        for (int i = 0; i < m_CardList.Count; i++)
-        {
-            for (int j = i; j < m_CardList.Count; j++)
-            {
-                if (m_CardList[j].Weight < m_CardList[i].Weight)
-                {
-                    Card temp = m_CardList[j];
-                    m_CardList[j] = m_CardList[i];
-                    m_CardList[i] = temp;
-                }
-            }
-        }
     }
 
-    private void GetCardType()
-    {
-        if (m_CardList[0].Weight == 5 && m_CardList[1].Weight == 3 && m_CardList[2].Weight == 2)
-        {
-            m_CardType = CardType.Max;
-        }
-        else if (m_CardList[0].Weight == m_CardList[1].Weight && m_CardList[1].Weight == m_CardList[2].Weight)
-        {
-            m_CardType = CardType.Baozi;
-        }
-        else if (m_CardList[0].Color == m_CardList[1].Color && m_CardList[1].Color == m_CardList[2].Color &&
-                 m_CardList[0].Weight == m_CardList[1].Weight + 1 && m_CardList[1].Weight == m_CardList[2].Weight + 1)
-        {
-            m_CardType = CardType.Shunjin;
-        }
-        else if (m_CardList[0].Color == m_CardList[1].Color && m_CardList[1].Color == m_CardList[2].Color)
-        {
-            m_CardType = CardType.Jinhua;
-        }
-        else if (m_CardList[0].Weight == m_CardList[1].Weight + 1 && m_CardList[1].Weight == m_CardList[2].Weight + 1)
-        {
-            m_CardType = CardType.Shunzi;
-        }
-        else if (m_CardList[0].Weight == m_CardList[1].Weight || m_CardList[1].Weight == m_CardList[2].Weight)
-        {
-            m_CardType = CardType.Duizi;
-        }
-        else
-        {
-            m_CardType = CardType.Min;
-        }
-    }
 }

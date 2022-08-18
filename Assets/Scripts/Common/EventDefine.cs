@@ -8,4 +8,6 @@
     ShowRechargePanel,
     UpdateCoinCount,
     ShowRoomChoosePanel,
+    VSAI,
+    VSWithSelf,
 }

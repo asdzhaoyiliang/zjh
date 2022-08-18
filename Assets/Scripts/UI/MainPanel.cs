@@ -45,7 +45,8 @@ public class MainPanel : MonoBehaviour
         btn_Online = transform.Find("btn_Online").GetComponent<Button>();
         btn_Online.onClick.AddListener(() =>
         {
-            EventCenter.Broadcast(EventDefine.ShowRoomChoosePanel, GameType.Net);
+            EventCenter.Broadcast(EventDefine.Hint,"敬请期待");
+            // EventCenter.Broadcast(EventDefine.ShowRoomChoosePanel, GameType.Net);
         });
 
         txt_UserName.text = Models.GameModel.userDto.UserName;

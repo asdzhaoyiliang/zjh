@@ -15,26 +15,58 @@ public class ZjhManager_Stand : MonoBehaviour
     private LeftManager_Stand m_LeftManager;
     private RightManager_Stand m_RightManager;
 
+    /// <summary>
+    /// 左边玩家是否弃牌
+    /// </summary>
+    public bool LeftIsGiveUp
+    {
+        get { return m_LeftManager.m_IsGiveUpCard; }
+    }
+    /// <summary>
+    /// 右边玩家是否弃牌
+    /// </summary>
+    public bool RightIsGiveUp
+    {
+        get { return m_RightManager.m_IsGiveUpCard; }
+    }
+    /// <summary>
+    /// 当前发牌的游标
+    /// </summary>
     private int m_CurrentDealCardIndex = 0;
-    private int m_CurrentStakesIndex = 0;
+    /// <summary>
+    /// 当前下注的游标
+    /// </summary>
+    public int m_CurrentStakesIndex = 0;
+    
 
+    /// <summary>
+    /// 牌库
+    /// </summary>
     private List<Card> m_CardList = new List<Card>();
+    /// <summary>
+    /// 发牌的下标
+    /// </summary>
     private int m_DealCardIndex = 0;
 
     private float m_DealCardDurationTime = 0.1f;
 
+    /// <summary>
+    /// 是否开始下注
+    /// </summary>
     private bool m_IsStartStakes = false;
+    
     private bool m_IsNextPlayerCanStake = true;
 
     /// <summary>
     /// 上一位玩家下注的数量
     /// </summary>
     private int m_LastPlayerStakesCount = 0;
-    
+
     public void SetNextPlayerStakes()
     {
         m_IsNextPlayerCanStake = true;
     }
+
     public void Awake()
     {
         Init();
@@ -69,6 +101,7 @@ public class ZjhManager_Stand : MonoBehaviour
                         m_IsNextPlayerCanStake = false;
                     }
                 }
+
                 if (m_CurrentStakesIndex % 3 == 1)
                 {
                     if (m_LeftManager.m_IsGiveUpCard == false)
@@ -77,6 +110,7 @@ public class ZjhManager_Stand : MonoBehaviour
                         m_IsNextPlayerCanStake = false;
                     }
                 }
+
                 if (m_CurrentStakesIndex % 3 == 2)
                 {
                     if (m_RightManager.m_IsGiveUpCard == false)
@@ -91,6 +125,44 @@ public class ZjhManager_Stand : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 和右边玩家比牌
+    /// </summary>
+    public void RightPlayerCompare()
+    {
+        if (m_SelfManager.m_IsGiveUpCard)
+        {
+            //和左边玩家比牌
+            EventCenter.Broadcast(EventDefine.VSAI, (BaseManager_Stand)m_RightManager,
+                (BaseManager_Stand)m_LeftManager);
+        }
+        else
+        {
+            //和self玩家比牌
+            EventCenter.Broadcast(EventDefine.VSWithSelf, (BaseManager_Stand)m_RightManager,
+                (BaseManager_Stand)m_SelfManager, "右边玩家", "我");
+        }
+    }
+
+    /// <summary>
+    /// 和左边玩家比牌
+    /// </summary>
+    public void LeftPlayerCompare()
+    {
+        if (m_SelfManager.m_IsGiveUpCard)
+        {
+            //和右边玩家比牌
+            EventCenter.Broadcast(EventDefine.VSAI, (BaseManager_Stand)m_LeftManager,
+                (BaseManager_Stand)m_RightManager);
+        }
+        else
+        {
+            //和self玩家比牌
+            EventCenter.Broadcast(EventDefine.VSWithSelf, (BaseManager_Stand)m_LeftManager,
+                (BaseManager_Stand)m_SelfManager, "左边玩家", "我");
+        }
+    }
+
     public int Stakes(int count)
     {
         m_LastPlayerStakesCount += count;
@@ -101,6 +173,7 @@ public class ZjhManager_Stand : MonoBehaviour
 
         return m_LastPlayerStakesCount;
     }
+
     public void ChooseBanker()
     {
         m_LeftManager.StartChooseBanker();
@@ -126,11 +199,10 @@ public class ZjhManager_Stand : MonoBehaviour
                 break;
             default:
                 break;
-            
         }
-        
+ 
         //发牌
-        EventCenter.Broadcast(EventDefine.Hint,"开始发牌");
+        EventCenter.Broadcast(EventDefine.Hint, "开始发牌");
         StartCoroutine(DealCard());
     }
 
@@ -143,26 +215,26 @@ public class ZjhManager_Stand : MonoBehaviour
             // 洗牌
             ClearCard();
         }
-        
+
         // 发牌
         for (int i = 0; i < 9; i++)
         {
-            if (m_CurrentDealCardIndex%3 == 0)
+            if (m_CurrentDealCardIndex % 3 == 0)
             {
                 //自身发牌
-                m_SelfManager.DealCard(m_CardList[m_DealCardIndex], m_DealCardDurationTime,new Vector3(0,215,0));
+                m_SelfManager.DealCard(m_CardList[m_DealCardIndex], m_DealCardDurationTime, new Vector3(0, 215, 0));
                 m_CardList.RemoveAt(m_DealCardIndex);
             }
-            else if (m_CurrentDealCardIndex%3 == 1)
+            else if (m_CurrentDealCardIndex % 3 == 1)
             {
                 //左边发牌
-                m_LeftManager.DealCard(m_CardList[m_DealCardIndex], m_DealCardDurationTime,new Vector3(556,0,0));
+                m_LeftManager.DealCard(m_CardList[m_DealCardIndex], m_DealCardDurationTime, new Vector3(556, 0, 0));
                 m_CardList.RemoveAt(m_DealCardIndex);
             }
             else
             {
                 //右边发牌
-                m_RightManager.DealCard(m_CardList[m_DealCardIndex], m_DealCardDurationTime,new Vector3(-523,0,0));
+                m_RightManager.DealCard(m_CardList[m_DealCardIndex], m_DealCardDurationTime, new Vector3(-523, 0, 0));
                 m_CardList.RemoveAt(m_DealCardIndex);
             }
 
@@ -170,6 +242,7 @@ public class ZjhManager_Stand : MonoBehaviour
             m_CurrentDealCardIndex++;
             yield return new WaitForSeconds(m_DealCardDurationTime);
         }
+
         //发牌结束
         m_SelfManager.DealCardFinished();
         m_LeftManager.DealCardFinished();
@@ -194,7 +267,9 @@ public class ZjhManager_Stand : MonoBehaviour
         for (int i = 0; i < m_CardList.Count; i++)
         {
             int ran = Random.Range(0, m_CardList.Count);
-            Card tmp = m_CardList[i]; m_CardList[i] = m_CardList[ran]; m_CardList[ran] = tmp;
+            Card tmp = m_CardList[i];
+            m_CardList[i] = m_CardList[ran];
+            m_CardList[ran] = tmp;
         }
     }
 }

@@ -45,6 +45,7 @@ public class RechargePanel : MonoBehaviour
 
     private void OnDestroy()
     {
+        EventCenter.RemoveListener(EventDefine.UpdateCoinCount, RechargeSuccess);
         EventCenter.RemoveListener(EventDefine.ShowRechargePanel, Show);
     }
 
