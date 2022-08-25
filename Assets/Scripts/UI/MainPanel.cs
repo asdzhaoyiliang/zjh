@@ -36,7 +36,10 @@ public class MainPanel : MonoBehaviour
             EventCenter.Broadcast(EventDefine.ShowRankListPanel);
         });
         btn_Bank = transform.Find("btn_Bank").GetComponent<Button>();
-        btn_Bank.onClick.AddListener(() => { EventCenter.Broadcast(EventDefine.ShowRechargePanel); });
+        btn_Bank.onClick.AddListener(() =>
+        {
+            EventCenter.Broadcast(EventDefine.ShowRechargePanel);
+        });
         btn_Stand = transform.Find("btn_Stand").GetComponent<Button>();
         btn_Stand.onClick.AddListener(() =>
         {

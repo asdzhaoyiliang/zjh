@@ -22,6 +22,12 @@ public abstract class LeftRightBaseManager_Stand : BaseManager_Stand
     {
         if (m_IsStartStakes)
         {
+            if (IsWin())
+            {
+                m_IsStartStakes = false;
+                return;
+            }
+
             if (m_RandomWaitStakesTime <= 0)
             {
                 //开始下注
@@ -46,8 +52,6 @@ public abstract class LeftRightBaseManager_Stand : BaseManager_Stand
         }
     }
 
-    
-
     public override void Win()
     {
         
@@ -57,7 +61,7 @@ public abstract class LeftRightBaseManager_Stand : BaseManager_Stand
     {
         GiveUpCard();
     }
-    
+
     private void Init()
     {
         m_StakeCountHint = transform.Find("StakeCountHint").GetComponent<StakeCountHint>();
@@ -107,7 +111,7 @@ public abstract class LeftRightBaseManager_Stand : BaseManager_Stand
                 //比牌
                 m_IsCompareing = true;
                 Compare();
-                StakesAfter(m_ZjhManager.Stakes(Random.Range(4,6)),"看看");
+                StakesAfter(m_ZjhManager.Stakes(Random.Range(4, 6)), "看看");
                 return;
             }
 
@@ -129,7 +133,7 @@ public abstract class LeftRightBaseManager_Stand : BaseManager_Stand
                 //比牌
                 m_IsCompareing = true;
                 Compare();
-                StakesAfter(m_ZjhManager.Stakes(Random.Range(4,6)),"看看");
+                StakesAfter(m_ZjhManager.Stakes(Random.Range(4, 6)), "看看");
             }
         }
         else if (m_CardType == CardType.Min)
@@ -145,7 +149,7 @@ public abstract class LeftRightBaseManager_Stand : BaseManager_Stand
                 //比牌
                 m_IsCompareing = true;
                 Compare();
-                StakesAfter(m_ZjhManager.Stakes(Random.Range(4,6)),"看看");
+                StakesAfter(m_ZjhManager.Stakes(Random.Range(4, 6)), "看看");
             }
             else
             {
@@ -159,6 +163,8 @@ public abstract class LeftRightBaseManager_Stand : BaseManager_Stand
             print("4");
         }
     }
+
+    public abstract bool IsWin();
 
     /// <summary>
     /// 弃牌

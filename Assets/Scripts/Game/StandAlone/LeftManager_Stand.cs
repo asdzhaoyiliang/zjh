@@ -19,4 +19,15 @@ public class LeftManager_Stand : LeftRightBaseManager_Stand
         m_ZjhManager.m_CurrentStakesIndex = 1;
         m_ZjhManager.SetNextPlayerStakes();
     }
+
+    public override bool IsWin()
+    {
+        if (m_ZjhManager.IsLeftWin())
+        {
+            m_ZjhManager.LeftWin();
+            return true;
+        }
+
+        return false;
+    }
 }

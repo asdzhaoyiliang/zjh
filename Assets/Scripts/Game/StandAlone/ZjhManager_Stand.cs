@@ -22,6 +22,7 @@ public class ZjhManager_Stand : MonoBehaviour
     {
         get { return m_LeftManager.m_IsGiveUpCard; }
     }
+
     /// <summary>
     /// 右边玩家是否弃牌
     /// </summary>
@@ -29,20 +30,23 @@ public class ZjhManager_Stand : MonoBehaviour
     {
         get { return m_RightManager.m_IsGiveUpCard; }
     }
+
     /// <summary>
     /// 当前发牌的游标
     /// </summary>
     private int m_CurrentDealCardIndex = 0;
+
     /// <summary>
     /// 当前下注的游标
     /// </summary>
     public int m_CurrentStakesIndex = 0;
-    
+
 
     /// <summary>
     /// 牌库
     /// </summary>
     private List<Card> m_CardList = new List<Card>();
+
     /// <summary>
     /// 发牌的下标
     /// </summary>
@@ -54,7 +58,7 @@ public class ZjhManager_Stand : MonoBehaviour
     /// 是否开始下注
     /// </summary>
     private bool m_IsStartStakes = false;
-    
+
     private bool m_IsNextPlayerCanStake = true;
 
     /// <summary>
@@ -123,6 +127,90 @@ public class ZjhManager_Stand : MonoBehaviour
                 m_CurrentStakesIndex++;
             }
         }
+    }
+
+    /// <summary>
+    /// 自身胜利
+    /// </summary>
+    public void SelfWin()
+    {
+        EventCenter.Broadcast(EventDefine.GameOver,-m_LeftManager.m_StakeSum,m_SelfManager.m_StakeSum,-m_RightManager.m_StakeSum);
+    }
+
+    /// <summary>
+    /// 左边胜利
+    /// </summary>
+    public void LeftWin()
+    {
+        EventCenter.Broadcast(EventDefine.GameOver,m_LeftManager.m_StakeSum,-m_SelfManager.m_StakeSum,-m_RightManager.m_StakeSum);
+    }
+
+    /// <summary>
+    /// 右边胜利
+    /// </summary>
+    public void RightWin()
+    {
+        EventCenter.Broadcast(EventDefine.GameOver,-m_LeftManager.m_StakeSum,-m_SelfManager.m_StakeSum,m_RightManager.m_StakeSum);
+    }
+
+    /// <summary>
+    /// 判断自身是否胜利
+    /// </summary>
+    /// <returns></returns>
+    public bool IsSelfWin()
+    {
+        if (m_LeftManager.m_IsGiveUpCard && m_RightManager.m_IsGiveUpCard)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// 判断自身是否胜利
+    /// </summary>
+    /// <returns></returns>
+    public bool IsLeftWin()
+    {
+        if (m_SelfManager.m_IsGiveUpCard && m_RightManager.m_IsGiveUpCard)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// 判断自身是否胜利
+    /// </summary>
+    /// <returns></returns>
+    public bool IsRightWin()
+    {
+        if (m_LeftManager.m_IsGiveUpCard && m_SelfManager.m_IsGiveUpCard)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// 自身与左边玩家比牌
+    /// </summary>
+    public void SelfCompareLeft()
+    {
+        EventCenter.Broadcast(EventDefine.VSWithSelf, (BaseManager_Stand)m_SelfManager,
+            (BaseManager_Stand)m_LeftManager, "我", "左边");
+    }
+
+    /// <summary>
+    /// 自身与右边玩家比牌
+    /// </summary>
+    public void SelfCompareRight()
+    {
+        EventCenter.Broadcast(EventDefine.VSWithSelf, (BaseManager_Stand)m_SelfManager,
+            (BaseManager_Stand)m_LeftManager, "我", "右边");
     }
 
     /// <summary>
@@ -200,7 +288,7 @@ public class ZjhManager_Stand : MonoBehaviour
             default:
                 break;
         }
- 
+
         //发牌
         EventCenter.Broadcast(EventDefine.Hint, "开始发牌");
         StartCoroutine(DealCard());

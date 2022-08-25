@@ -117,7 +117,6 @@ public class VSPanel_Stand : MonoBehaviour
             {
                 for (int i = 2; i >= 0; i--)
                 {
-
                     if (compare.m_CardList[i].Weight > compared.m_CardList[i].Weight)
                     {
                         ComparePlayerWin();

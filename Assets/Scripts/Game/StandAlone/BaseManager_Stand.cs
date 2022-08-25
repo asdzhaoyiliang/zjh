@@ -8,7 +8,7 @@ public abstract class BaseManager_Stand : MonoBehaviour
 {
     public List<Card> m_CardList = new List<Card>();
     public CardType m_CardType;
-    protected int m_StakeSum = 0;
+    public int m_StakeSum = 0;
 
     public bool m_IsGiveUpCard = false;
     protected bool m_IsStartStakes = false;

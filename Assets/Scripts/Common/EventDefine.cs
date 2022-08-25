@@ -10,4 +10,5 @@
     ShowRoomChoosePanel,
     VSAI,
     VSWithSelf,
+    GameOver,
 }
