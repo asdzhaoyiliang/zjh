@@ -61,15 +61,15 @@ public class VSPanel_Stand : MonoBehaviour
     IEnumerator CompareWin()
     {
         yield return new WaitForSeconds(2f);
-        compare.Win();
-        compared.Lose();
+        compare.CompareWin();
+        compared.CompareLose();
     }
 
     IEnumerator CompareLose()
     {
         yield return new WaitForSeconds(2f);
-        compare.Lose();
-        compared.Win();
+        compare.CompareLose();
+        compared.CompareWin();
     }
     public void VSWithSelf(BaseManager_Stand compare, BaseManager_Stand compared, string compareName, string comparedName)
     {

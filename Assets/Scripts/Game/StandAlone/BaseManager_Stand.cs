@@ -36,8 +36,8 @@ public abstract class BaseManager_Stand : MonoBehaviour
     protected Transform CardPoints;
 
 
-    public abstract void Win();
-    public abstract void Lose();
+    public abstract void CompareWin();
+    public abstract void CompareLose();
     public virtual void StakesAfter(int count, string str)
     {
         m_StakeCountHint.Show(count + str);

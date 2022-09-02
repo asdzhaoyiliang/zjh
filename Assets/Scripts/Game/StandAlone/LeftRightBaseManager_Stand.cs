@@ -33,7 +33,7 @@ public abstract class LeftRightBaseManager_Stand : BaseManager_Stand
                 //开始下注
                 PutStakes();
                 m_IsStartStakes = false;
-                // if (m_IsCompareing)
+                if (m_IsCompareing == false)
                 {
                     go_CountDown.SetActive(false);
                     m_ZjhManager.SetNextPlayerStakes();
@@ -52,12 +52,12 @@ public abstract class LeftRightBaseManager_Stand : BaseManager_Stand
         }
     }
 
-    public override void Win()
+    public override void CompareWin()
     {
         
     }
 
-    public override void Lose()
+    public override void CompareLose()
     {
         GiveUpCard();
     }

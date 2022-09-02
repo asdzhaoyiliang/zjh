@@ -14,6 +14,7 @@ public class ZjhManager_Stand : MonoBehaviour
     private SelfManager_Stand m_SelfManager;
     private LeftManager_Stand m_LeftManager;
     private RightManager_Stand m_RightManager;
+    private AudioSource m_AudioSource;
 
     /// <summary>
     /// 左边玩家是否弃牌
@@ -78,6 +79,7 @@ public class ZjhManager_Stand : MonoBehaviour
 
     public void Init()
     {
+        m_AudioSource = GetComponent<AudioSource>();
         m_SelfManager = GetComponentInChildren<SelfManager_Stand>();
         m_LeftManager = GetComponentInChildren<LeftManager_Stand>();
         m_RightManager = GetComponentInChildren<RightManager_Stand>();
@@ -307,6 +309,7 @@ public class ZjhManager_Stand : MonoBehaviour
         // 发牌
         for (int i = 0; i < 9; i++)
         {
+            m_AudioSource.Play();
             if (m_CurrentDealCardIndex % 3 == 0)
             {
                 //自身发牌

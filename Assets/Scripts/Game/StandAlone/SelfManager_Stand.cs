@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class SelfManager_Stand : BaseManager_Stand
 {
+    public AudioClip clip_Start;
+    public AudioClip clip_GiveUp;
     private GameObject go_BottomButton;
     private Text txt_UserName;
     private Text txt_CoinCount;
@@ -24,6 +26,7 @@ public class SelfManager_Stand : BaseManager_Stand
     private GameObject go_CompareBtns;
     private Button btn_CompareLeft;
     private Button btn_CompareRight;
+    private AudioSource m_AudioSource;
 
     public void Awake()
     {
@@ -82,7 +85,7 @@ public class SelfManager_Stand : BaseManager_Stand
         }
     }
 
-    public override void Win()
+    public override void CompareWin()
     {
         m_IsStartStakes = false;
         go_CountDown.SetActive(false);
@@ -90,13 +93,16 @@ public class SelfManager_Stand : BaseManager_Stand
         m_ZjhManager.SetNextPlayerStakes();
     }
 
-    public override void Lose()
+    public override void CompareLose()
     {
         OnGiveUpCardButtonClick();
     }
 
     private void OnGiveUpCardButtonClick()
     {
+        m_AudioSource.clip = clip_GiveUp;
+        m_AudioSource.Play();
+        
         m_IsStartStakes = false;
         go_BottomButton.SetActive(false);
         go_CountDown.SetActive(false);
@@ -114,6 +120,7 @@ public class SelfManager_Stand : BaseManager_Stand
 
     private void Init()
     {
+        m_AudioSource = GetComponent<AudioSource>();
         m_StakeCountHint = transform.Find("StakeCountHint").GetComponent<StakeCountHint>();
         m_ZjhManager = gameObject.GetComponentInParent<ZjhManager_Stand>();
         go_BottomButton = transform.Find("BottomButton").gameObject;
@@ -258,6 +265,8 @@ public class SelfManager_Stand : BaseManager_Stand
 
     public void ReadyButtonClick()
     {
+        m_AudioSource.clip = clip_Start;
+        m_AudioSource.Play();
         m_StakeSum += Models.GameModel.botStacks;
         txt_StakeSum.text = m_StakeSum.ToString();
         if (NetMsgCenter.Instance != null)

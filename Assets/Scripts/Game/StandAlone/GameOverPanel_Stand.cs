@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameOverPanel : MonoBehaviour
+public class GameOverPanel_Stand : MonoBehaviour
 {
     [Serializable]
     public class Player
@@ -18,12 +18,15 @@ public class GameOverPanel : MonoBehaviour
         public Image img_Lose;
     }
 
+    public AudioClip clip_Win;
+    public AudioClip clip_Lose;
     public Player m_LeftPlayer;
     public Player m_SelfPlayer;
     public Player m_RightPlayer;
 
     private Button btn_Again;
     private Button btn_MainMenu;
+    private AudioSource m_AudioSource;
 
     public void Awake()
     {
@@ -33,17 +36,19 @@ public class GameOverPanel : MonoBehaviour
 
     public void Init()
     {
+        m_AudioSource = GetComponent<AudioSource>();
+        
         m_LeftPlayer.txt_CoinCount = transform.Find("Left/txt_CoinCount").GetComponent<Text>();
         m_LeftPlayer.img_Win = transform.Find("Left/img_Win").GetComponent<Image>();
         m_LeftPlayer.img_Lose = transform.Find("Left/img_Lose").GetComponent<Image>();
 
-        m_SelfPlayer.txt_CoinCount = transform.Find("Left/txt_CoinCount").GetComponent<Text>();
-        m_SelfPlayer.img_Win = transform.Find("Left/img_Win").GetComponent<Image>();
-        m_SelfPlayer.img_Lose = transform.Find("Left/img_Lose").GetComponent<Image>();
+        m_SelfPlayer.txt_CoinCount = transform.Find("Self/txt_CoinCount").GetComponent<Text>();
+        m_SelfPlayer.img_Win = transform.Find("Self/img_Win").GetComponent<Image>();
+        m_SelfPlayer.img_Lose = transform.Find("Self/img_Lose").GetComponent<Image>();
 
-        m_RightPlayer.txt_CoinCount = transform.Find("Left/txt_CoinCount").GetComponent<Text>();
-        m_RightPlayer.img_Win = transform.Find("Left/img_Win").GetComponent<Image>();
-        m_RightPlayer.img_Lose = transform.Find("Left/img_Lose").GetComponent<Image>();
+        m_RightPlayer.txt_CoinCount = transform.Find("Right/txt_CoinCount").GetComponent<Text>();
+        m_RightPlayer.img_Win = transform.Find("Right/img_Win").GetComponent<Image>();
+        m_RightPlayer.img_Lose = transform.Find("Right/img_Lose").GetComponent<Image>();
 
         btn_Again = transform.Find("btn_Again").GetComponent<Button>();
         btn_Again.onClick.AddListener(OnAgainButtonClick);
@@ -80,11 +85,15 @@ public class GameOverPanel : MonoBehaviour
         //自身
         if (selfCoinCount < 0)
         {
+            m_AudioSource.clip = clip_Lose;
+            m_AudioSource.Play();
             m_SelfPlayer.img_Lose.gameObject.SetActive(true);
             m_SelfPlayer.txt_CoinCount.text = selfCoinCount.ToString();
         }
         else
         {
+            m_AudioSource.clip = clip_Win;
+            m_AudioSource.Play();
             var winCoin = Mathf.Abs(leftCoinCount + rightCoinCount) + selfCoinCount;
             if (NetMsgCenter.Instance != null)
             {

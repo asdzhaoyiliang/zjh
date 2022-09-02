@@ -11,13 +11,14 @@ public class RightManager_Stand : LeftRightBaseManager_Stand
         m_ZjhManager.RightPlayerCompare();
     }
 
-    public override void Win()
+    public override void CompareWin()
     {
-        base.Win();
+        base.CompareWin();
         m_IsStartStakes = false;
         go_CountDown.SetActive(false);
         m_ZjhManager.m_CurrentStakesIndex = 2;
         m_ZjhManager.SetNextPlayerStakes();
+        m_IsCompareing = false;
     }
 
     public override bool IsWin()
